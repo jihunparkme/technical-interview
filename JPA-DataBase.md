@@ -54,6 +54,26 @@ List<Owner> findAllEntityGraph();
 
 ## 기본 원리
 
+## JPA, Hibernate, Spring Data JPA
+
+**JPA**
+
+- Java Persistence API의 약자, 단순한 기술 명세서
+- 자바 어플리케이션에서 관계형 데이터베이스를 사용하는 방식을 정의한 `인터페이스`, 어떻게 사용해야 하는지를 정의하는 한 방법
+
+**Hibernate**
+
+- JPA라는 명세의 구현체 (JPA 인터페이스를 직접 구현한 라이브러리)
+- Hibernate 뿐만 아니라 DataNucleus, EclipseLink 등 다른 JPA 구현체도 존재
+
+**Spring Data JPA**
+
+- JPA를 쓰기 편하게 만들어놓은 모듈
+- Repository가 바로 Spring Data JPA의 핵심
+- 개발자가 JPA를 더 쉽고 편하게 사용할 수 있도록 도와준다
+
+<https://suhwan.dev/2019/02/24/jpa-vs-hibernate-vs-spring-data-jpa/>
+
 # DataBase
 
 데이터베이스 정규화 과정에 대해 설명해주세요.
