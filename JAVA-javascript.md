@@ -1,17 +1,52 @@
 # JAVA
 
-OOP란
+🚩 OOP란? 객체 지향 프로그래밍이란 ?
+
+- Object-Oriented Programming
+- 프로그램을 단순히 데이터와 처리 방법으로 나누는 것이 아니라, 프로그램을 수많은 '객체(object)'라는 기본 단위로 나누고 이들의 상호작용으로 서술하는 방식이다. 객체란 하나의 역할을 수행하는 '메소드와 변수(데이터)'의 묶음으로 봐야 한다.
+
+🚩 자바의 메모리 영역에 대해 설명해주세요.
+
+- Method Area
+  - JVM이 실행되면서 생기는 공간
+  - Class/전역변수/Static 변수 정보가 저장되는 공간
+  - 모든 스레드에서 정보가 공유
+- Heap
+  - new 연산자로 생성된 객체
+  - Heap에 저장된 데이터는 Garbage Collector 가 처리하지 않는한 소멸되지 않는다.
+  - Reference Type 의 데이터가 저장되는 공간
+  - 모든 스레드에서 정보가 공유
+- Stack
+  - 지역변수, 메소드의 매개변수와 같이 잠시 사용되고 필요가 없어지는 데이터가 저장되는 공간
+  - Last In First Out
+  - 지역변수 이지만 Reference Type일 경우에는 Heap 에 저장된 데이터의 주소값을 Stack 에 저장해서 사용
+  - 스레드마다 하나씩 존재
+- PC Register
+  - 스레드가 생성되면서 생기는 공간
+  - 스레드가 어느 명령어를 처리하고 있는지 그 주소를 등록
+  - JVM이 실행하고 있는 현재 위치를 저장
+- Native Method Stack
+  - Java 가 아닌 다른 언어 (C, C++) 로 구성된 메소드를 실행이 필요할 때 사용되는 공간
+
+[자바의 메모리 구조](https://velog.io/@shin_stealer/%EC%9E%90%EB%B0%94%EC%9D%98-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B5%AC%EC%A1%B0)
+
+🚩 Primitive type vs Reference type
+
+🚩 GC처리 방법에 대해 설명하시오.
+
+🚩
+
+🚩
+
+🚩
 
 
-객체지향 프로그래밍에 대해 설명해주세요.
 
-자바의 메모리 영역에 대해 설명해주세요.
+
 
 Interface와 Abstract에 대해 말해주세요.
 
 스트링과 스트링버퍼의 차이에 대해 설명해주세요.
-
-자바의 데이터 타입인 Primitive Type(기본형) 에 대해 말해보세요.
 
 접근제어자의 종류와 특성에 대해 설명해보세요.
 
@@ -33,7 +68,7 @@ final 키워드에 대해 설명해주세요.
 
 JVM구조에 대해 설명하시오.
 
-GC처리 방법에 대해 설명하시오.
+
 
 HashMap vs HashTable vs ConcurrentHashMap의 차이를 설명하시오.
 
