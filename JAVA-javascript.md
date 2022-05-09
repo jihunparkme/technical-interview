@@ -182,15 +182,29 @@ MyArray<Integer> myArr = new MyArray<Integer>();
   - 불연속적(비순차적)으로 존재하는 데이터를 서로 연결(link)한 형태로 구성
   - 데이터 삭제/추가 속도가 빠름
 
+🚩 new String()과 ""의 차이에 대해 설명해주세요.
+
+- new String()은 새로운 객체를 만드는 것으로 `heap area`에 저장이 되고, 
+- String str = ""; 처럼 리터럴을 이용한 변수 할당은, `string constant pool`영역에 저장되기 때문에 서로 잠조하고 있는 레퍼런스 주소가 다르다.
+
+🚩 CheckedException과 UnCheckedException의 차이를 설명하시오.
+- CheckedException
+  - RuntimeException을 상속하지 않는 클래스
+- UnCheckedException
+  - RuntimeException을 상속한 클래스
+
+|           구분               |   Checked Exception   |                  Unchecked Exception                    |                   
+| ------------------------ | :---------: | :--------------------------------------------: | 
+| 확인 시점    |      컴파일 시점      |                       런타임 시점                        |                          
+| 처리 여부 |      반드시 예외 처리      |                       명시적으로 하지 않아도 됨                        |                          
+| 트랜잭션 처리                | 예외 발생시 롤백을 하지 않음 |                  예외 발생시 롤백을 해야 함                   |
+| 종류                     |      IOExceoption, ClassNotFoundException..     |  NullPointException, ClassCastException...
+
 ---
 
 🚩 자바 코드의 실행 과정을 설명해주세요.
 
 🚩 JVM, JRE, JDK 를 설명해주세요.
-
-
-
-
 
 🚩 try-with-resources에 대해 설명하시오.
 
@@ -200,17 +214,36 @@ MyArray<Integer> myArr = new MyArray<Integer>();
 
 🚩 컬렉션 프레임워크에 대해 설명하시오.
 
-🚩 CheckedException과 UnCheckedException의 차이를 설명하시오.
-
 🚩 final / finally / finalize 의 차이를 설명하시오.
 
-🚩 new String()과 ""의 차이에 대해 설명해주세요.
 
-🚩 스프링 IOC가 무엇인가요?
+🚩 Spring DI
+- DI(Dependency Injection)란 의존 관계 주입 기능
+- 객체를 직접 생성하는 게 아니라 외부에서 생성한 후 주입 시켜주는 방식
+- DI(의존성 주입)를 통해서 모듈 간의 결합도가 낮아지고 유연성이 높아진다.
+
+🚩 Spring IOC
+- IoC(Inversion of Control)란 제어의 역전
+- 프로그램의 제어 흐름(메소드나 객체의 호출작업)을 직접 제어하는 것이 아니라 외부에서 관리하는 것
+- 객체의 의존성을 역전시켜 객체 간의 결합도를 줄이고 유연한 코드를 작성할 수 있게 하여 가독성 및 코드 중복, 유지 보수를 편하게 할 수 있게 한다.
 
 🚩 OOP와 AOP에 대한 차이를 설명해주세요.
+- OOP(Object Oriented Programming, 객체지향 프로그래밍)
+  - 모든 데이터를 현실에 빗대어 객체로 다루는 프로그래밍 기법
+  - 객체지향 언어의 5가지 특징
+    - 캡슐화 (Encapsulation) : 데이터와 함수를 하나로 묶는다.
+    - 정보은닉 (Information Hiding) : private으로 선언한 데이터는 자기 자신을 통해서만(setter, getter) 접근 가능하다.
+    - 추상화 (Abstraction) : 불필요한 부분은 생략하고 중요한 것에만 초점을 맞춰 모델로 만든다.
+    - 상속성 (Inheritance) : 부모클래스에 정의된 모든 것을 자식 클래스가 물려받는다.
+    - 다형성 (Polymorphism) : 호출하는 객체에 따라 다른 동작을 한다.
+- AOP(Aspect Oriented Programming) - 관점 지향 프로그래밍
+  - OOP를 더욱 발전시키기 위한 개념
+  - 하나의 소프트웨어가 하나의 거대한 OOP로써 설계, 프로그래밍 되었다면 이것을 각 기능별로 모듈화해서 분리를 시키는 개념
 
 🚩 POJO가 무엇인가요?
+- Plain Old Java Object, 단순한 자바 오브젝트
+- 객체 지향적인 원리에 충실하면서 환경과 기술에 종속되지 않고 필요에 따라 재활용될 수 있는 방식으로 설계된 오브젝트
+- POJO에 애플리케이션의 핵심로직과 기능을 담아 설계하고 개발하는 방법을 POJO 프로그래밍
 
 # JavaScript
 
