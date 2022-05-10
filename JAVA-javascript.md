@@ -193,28 +193,82 @@ MyArray<Integer> myArr = new MyArray<Integer>();
 - UnCheckedException
   - RuntimeException을 상속한 클래스
 
-|           구분               |   Checked Exception   |                  Unchecked Exception                    |                   
-| ------------------------ | :---------: | :--------------------------------------------: | 
-| 확인 시점    |      컴파일 시점      |                       런타임 시점                        |                          
-| 처리 여부 |      반드시 예외 처리      |                       명시적으로 하지 않아도 됨                        |                          
+|           구분               |   Checked Exception   |                  Unchecked Exception                    |
+| ------------------------ | :---------: | :--------------------------------------------: |
+| 확인 시점    |      컴파일 시점      |                       런타임 시점                        |
+| 처리 여부 |      반드시 예외 처리      |                       명시적으로 하지 않아도 됨                        |
 | 트랜잭션 처리                | 예외 발생시 롤백을 하지 않음 |                  예외 발생시 롤백을 해야 함                   |
-| 종류                     |      IOExceoption, ClassNotFoundException..     |  NullPointException, ClassCastException...
-
----
-
+| 종류 | IOExceoption, ClassNotFoundException.. | NullPointException, ClassCastException... |
 🚩 자바 코드의 실행 과정을 설명해주세요.
+
+- `.java` -> 컴파일러 -> `.class` -> (로딩 -> 배치 -> `실행`) JVM
+- Java 언어로 프로그래밍된 파일을 Java컴파일러가 가상 기계어 파일인 Java클래스 파일로 생성
+- 소스 코드를 Java바이트 코드로 번역
+- 이후 Java바이트 코드를 JVM이 읽고 실행
 
 🚩 JVM, JRE, JDK 를 설명해주세요.
 
+**JVM**
+
+-  자바 가상머신(Java Virtual Machine)
+- 자바 소스코드로부터 만들어지는 자바 바이너리 파일(.class)을 실행
+- 컴파일된 바이너리 코드는 어떤 JVM에서도 동작
+
+**JRE**
+
+- 자바 실행환경(Java Runtime Environment)
+- JVM 이 자바 프로그램을 동작시킬 때 필요한 라이브러리 파일들과 기타 파일들을 가지고 있음
+- JVM의 실행환경을 구현
+
+**JDK**
+
+-  자바 개발도구(Java Development Kit)
+- JRE + 개발을 위해 필요한 도구(javac, java등)들을 포함
+
 🚩 try-with-resources에 대해 설명하시오.
+
+- 선언된 객체들에 대해서 try가 종료될 때 자동으로 자원을 해제해주는 기능
+- try에서 선언된 객체가 AutoCloseable을 구현하였다면 Java는 try구문이 종료될 때 객체의 `close()` 메소드를 호출
 
 🚩 Synchronize에 대해 설명하시오.
 
+- 멀티 쓰레드 환경에서 두개 이상의 쓰레드가 하나의 변수에 동시에 접근을 할 때 Race condition(경쟁상태)이 발생하지 않도록 하기 위해 사용
+
 🚩 Synchronize를 하기 위한 방법은 무엇이 있나요?
+
+- synchronized block을 사용
+
+```java
+synchronized (SynchronizedKeywordExample.class) {
+    number++;
+    System.out.println(number);
+}
+```
 
 🚩 컬렉션 프레임워크에 대해 설명하시오.
 
+- 데이터를 저장하는 자료 구조와 데이터를 처리하는 알고리즘을 구조화하여 클래스로 구현해 놓은 것
+- List / Set / Map 인터페이스
+- [컬렉션 프레임워크의 개념](http://www.tcpschool.com/java/java_collectionFramework_concept)
+
 🚩 final / finally / finalize 의 차이를 설명하시오.
+
+**final**
+
+- final 변수 : 상수
+- final 메서드 : 다른 클래스가 이 클래스를 상속할 때 메소드 오버라이딩 금지
+- final 함수 : 다른 클래스에서 이 클래스를 상속할 수 없음
+
+**finally**
+
+- `try-catch`와 함께 사용
+- `try-catch`가 종료될 때 finally block이 항상 수행
+
+**finalize**
+
+- Object 클래스에 선언된 protected 메소드
+- Garbage collector가 어떤 객체를 참조하는 객체가 없다고 생각되면, 이 객체를 소멸
+- 객체를 소멸시킬 때 `finalize()` 메소드를 호출
 
 
 🚩 Spring DI
