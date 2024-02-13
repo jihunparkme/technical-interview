@@ -345,16 +345,54 @@ synchronized (SynchronizedKeywordExample.class) {
 - 객체 지향적인 원리에 충실하면서 환경과 기술에 종속되지 않고 필요에 따라 재활용될 수 있는 방식으로 설계된 오브젝트
 - POJO에 애플리케이션의 핵심로직과 기능을 담아 설계하고 개발하는 방법을 POJO 프로그래밍
 
-# JavaScript
 
-🚩 Shell에서의 return
 
-- shell script에서는 `return` 반환값이 d없다.
-  - `exit`을 통해 상태 종료 표시만을 프로세스 실행 결과로 반환할 수 있음
-  - 일반적으로 `0`은 성공, 나머지인 `1 ~ 255`는 에러
-- Shell 스크립트 함수에서 결과값 받기
-  - `$(명령어 or 쉘 스크립트 실행 or 쉘 스크립트 함수)`와 같이 `$`와 `()`안에 명령어, 쉘 스크립트 또는 쉘 스크립트 함수를 넣으면 해당 부분들을(명령어, 쉘 스크립트 또는 쉘 스크립트 함수) 실행할 subshell을 호출
-  - 해당 `$()`를 통한 subshell 생성은 부모 shell의 변수나 값들을 가져오기 때문에 함수도 변수도 다 사용할 수 있습니다. 다만, subshell의 결과가 부모 shell에 영향을 주지는 않습니다.
+Functional Interface
 
-[쉘 스크립트 함수나 실행에서 반환값(Return Value) 얻기](https://twpower.github.io/134-how-to-return-shell-scipt-value)
+Java CompletableFuture
 
+OOP(Object-Oriented Programming)의 주요 원칙 네 가지에 대해 설명해주세요.
+
+Java에서 ==와 equals() 메서드의 차이점은 무엇인가요?
+
+String, StringBuilder, StringBuffer의 차이점은 무엇인가요?
+
+Java의 예외 처리 방법에 대해 설명해주세요. Checked Exception과 Unchecked Exception의 차이점은 무엇인가요?
+
+JVM의 구조에 대해 설명해주세요. Garbage Collection의 작동 원리에 대해서도 설명해주세요.
+
+JIT 컴파일러란 무엇이며, 어떤 역할을 하나요?
+
+메모리 누수(memory leak)란 무엇이며, Java에서 메모리 누수를 방지하기 위한 방법은 무엇인가요?
+
+Java에서 스레드를 생성하는 방법에는 어떤 것들이 있나요? Runnable과 Thread 클래스의 차이점은 무엇인가요?
+
+동기화(Synchronization)의 개념과 필요성에 대해 설명해주세요. synchronized 키워드의 작동 원리는 무엇인가요?
+
+Deadlock이란 무엇이며, 어떻게 예방할 수 있나요?
+
+Lambda 표현식이란 무엇이며, 어떻게 사용하나요?
+
+Stream API의 주요 특징과 사용 사례를 설명해주세요.
+
+Java에서 제공하는 동기화 방법은? Java Collection / Stream의 차이는?
+
+Optional 클래스의 목적과 사용 방법에 대해 설명해주세요.
+
+싱글톤(Singleton) 패턴이란 무엇이며, Java에서 어떻게 구현하나요?
+
+팩토리 메서드(Factory Method) 패턴과 추상 팩토리(Abstract Factory) 패턴의 차이점은 무엇인가요?
+
+MVC(Model-View-Controller) 아키텍처 패턴에 대해 설명해주세요.
+
+Collection 프레임워크 내의 List, Set, Map의 차이점과 사용 사례를 설명해주세요.
+
+데드락(Deadlock)을 경험한 적이 있나요? 만약 있다면, 그 상황을 어떻게 해결했나요?
+
+최근에 작업한 프로젝트에서 가장 기술적으로 도전적이었던 문제는 무엇이었고, 어떻게 해결했나요?
+
+Override / Overloading 차이점?
+
+ArrayList의 Add 메소드가 내부적으로 어떻게 작동하는지, String의 subString 메소드가 내부적으로 어떻게 작동하는지.
+
+CopyOnArray, CopyOnWrite 자료구조의 의미를 설명해달라.

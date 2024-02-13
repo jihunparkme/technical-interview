@@ -74,30 +74,5 @@ List<Owner> findAllEntityGraph();
 
 <https://suhwan.dev/2019/02/24/jpa-vs-hibernate-vs-spring-data-jpa/>
 
-# DataBase
 
-데이터베이스 정규화 과정에 대해 설명해주세요.
-
-해시테이블에 대해 설명해주세요.
-
-데이터베이스 트랜잭션이란 무엇인가요?
-
-쿼리가 들어올 때, 어떻게 해야 효과적으로 저장할 수 있나요?
-
-디비 풀은 왜 쓰나요?
-
-디비 실시간 통신과 디비풀 이용시의 차이가 무엇인가요?
-
-SQL에서 left join에 대해 설명하시오.
-
-RDBMS와 NoSQL의 차이는?
-
-index에 대한 설명과 장/단점으로 무엇이 있나요.
-
-몽고DB의 특성에 대해 설명해주세요.
-
-SQL Injection은 무엇인가요?
-
-ACID에 대해 설명해주세요. (Atomic, Consistency, Isolation, Durability)
-
-1차 정규화, 2차 정규화, 3차 정규화, BCNF에 대해 설명해주세요.
+JPA에서 DB transaction이 어떻게 작동하는지
